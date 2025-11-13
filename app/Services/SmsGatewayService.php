@@ -92,4 +92,18 @@ class SmsGatewayService
 
         return $response;
     }
+
+    // public function sendSMS($phoneCode, $phoneNumber, $message)
+    // {
+    //     if (! $this->gateway) {
+    //         return false;
+    //     }
+
+    //     $to = $phoneCode . $phoneNumber;
+
+    //     // $phoneNumber = '+91'.substr($to, -10);
+    //     $response = $this->gateway->sendMessage($to, $message);
+
+    //     return $response;
+    // }
 }

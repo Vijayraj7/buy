@@ -39,9 +39,10 @@ class DashboardController extends Controller
             $totalShop = 0;
             $totalOrder = Order::where('shop_id', $shop?->id)->count();
             $totalProduct = Product::where('shop_id', $shop?->id)->count();
-            $totalCategories = Category::whereHas('shops', function ($query) use ($shop) {
-                $query->where('id', $shop?->id);
-            })->count();
+            $totalCategories = Category::count();
+            // $totalCategories = Category::whereHas('shops', function ($query) use ($shop) {
+            //     $query->where('id', $shop?->id);
+            // })->count();
         }
 
         $orderStatuses = OrderStatus::cases();

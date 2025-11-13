@@ -28,7 +28,7 @@ class BlogController extends Controller
 
         return view('admin.blog.create', compact('categories', 'tags'));
     }
-
+ 
     public function store(BlogRequest $request)
     {
         BlogRepository::storeByRequest($request);

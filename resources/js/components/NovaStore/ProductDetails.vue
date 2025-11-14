@@ -246,7 +246,7 @@
                         <!-- Title -->
 
                         <div
-                            class="self-stretch justify-start text-slate-950 text-3xl font-semibold font-['Lato'] leading-10 normal-case"
+                            class="self-stretch justify-start text-slate-950 text-3xl font-semibold font-['Lato'] leading-10 normal-case":style="{ fontSize: '20px', lineHeight: '2rem' }"
                         >
                             {{ product.name }}
                         </div>

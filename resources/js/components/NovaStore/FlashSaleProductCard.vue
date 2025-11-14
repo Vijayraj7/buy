@@ -54,11 +54,13 @@
                     class="self-stretch inline-flex justify-start items-center gap-6"
                 >
                     <div
-                        class="flex-1 justify-start text-zinc-900 text-lg font-semibold font-['Lato'] leading-relaxed h-14 overflow-hidden"
+                        class="flex-1 justify-start text-zinc-900 text-lg font-semibold font-['Lato'] leading-relaxed h-14 overflow-hidden" style="font-size: 15px;"
                     >
-                        {{ truncate(product?.name, 60) }}
-                    </div>
-                </RouterLink>
+                        {{ truncate(product?.name, 100) }}
+                    </div> 
+                    <!-- font size and weight(60 to 100) updated by ancy -->
+                </RouterLink> 
+                
                 <div
                     class="self-stretch inline-flex justify-between items-center"
                 >

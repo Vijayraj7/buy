@@ -4,7 +4,7 @@
             <img v-if="master.logo" :src="master.logo" alt="" class="h-[40px] w-full object-contain" />
             <img v-else src="../../../../public/assets/logo.png" class="h-[40px] w-full object-contain" />
         </RouterLink>
-        <div class="text-slate-500 flex items-center gap-1 font-normal text-sm leading-[22px]">
+        <!-- <div class="text-slate-500 flex items-center gap-1 font-normal text-sm leading-[22px]">
             <div class="icon">
                 <img
                     src="../../../../public/assets/images/location-pin.svg"
@@ -14,8 +14,8 @@
             </div>
                <span class="hidden md:block">{{ truncate(master?.address, 60)}}</span>
                <span class="block md:hidden" >{{ truncate(master?.address, 10) }}</span>
-        </div>
-
+        </div> -->
+        <!-- this section hide by ancy -->
         <div
             class="hidden lg:flex justify-between items-center gap-4"
             :class="master.langDirection == 'rtl' ? 'mr-auto' : 'ml-auto'"

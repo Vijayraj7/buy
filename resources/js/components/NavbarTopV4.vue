@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-zinc-900">
+    <!-- <div class="bg-zinc-900">
         <div
             class="main-container py-1.5 gap-[6px] text-white"
             :class="
@@ -193,7 +193,7 @@
                 
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script setup>

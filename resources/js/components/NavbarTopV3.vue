@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black">
+    <!-- <div class="bg-black">
         <div
             class="main-container py-1.5 gap-[6px] text-white"
             :class="
@@ -137,7 +137,7 @@
                         <MenuButton
                             class="flex justify-between items-center text-white gap-2 text-xs md:text-sm font-normal leading-tight"
                         >
-                            <!-- {{ currentLanguage }} -->
+                            {{ currentLanguage }}
                             <img
                                 :src="currentLanguage.flag"
                                 alt="flag"
@@ -200,7 +200,7 @@
                 </Menu>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script setup>

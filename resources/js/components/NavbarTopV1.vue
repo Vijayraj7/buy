@@ -11,7 +11,7 @@
             <div
                 class="flex items-center justify-between md:justify-start gap-4 w-full"
             >
-                <div
+                <!-- <div
                     class="text-white text-sm font-normal leading-tight flex items-center gap-2"
                 >
                     <span
@@ -25,7 +25,7 @@
                     <span class="text-[8px]  lg:text-sm font-normal  lg:font-light font-['Inter'] leading-[8plg"
                         >{{ $t("Hotline") }}: {{ master.mobile }}</span
                     >
-                </div>
+                </div> -->
 
                 <span class="hidden md:block text-sm font-thin">|</span>
 

@@ -1,6 +1,6 @@
 <template>
     <router-link :to="routeUrl"
-        class="w-full p-2 transition-all duration-300 border border-transparent group hover:border-green-500 bg-neutral-100 hover:bg-green-300/10 rounded-xl inline-flex justify-center items-center gap-4"
+        class="w-full p-2 transition-all duration-300 border border-transparent group hover:border-green-500 bg-neutral-100 hover:bg-green-300/10 rounded-xl inline-flex justify-center items-center gap-4" style="width: 130px;"
     >
         <div
             class="flex-1 pb-2 bg-white rounded-lg inline-flex flex-col justify-center items-center gap-2"
@@ -8,7 +8,7 @@
             <img
                 class="h-36 w-full rounded-lg object-cover"
                 :src="props.category?.thumbnail"
-                alt="icon"
+                alt="icon" style="height: 6rem;"
             />
             <div
                 class="w-full flex flex-col justify-center items-center gap-0.5"
@@ -24,6 +24,7 @@
                     {{ category?.total_products }} {{$t('Items')}}
                 </div>
             </div>
+            <!-- width and height styles added by ancy -->
         </div>
     </router-link>
 </template>

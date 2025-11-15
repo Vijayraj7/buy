@@ -528,7 +528,11 @@
                                 <div
                                     class="w-6 flex items-center justify-center text-center text-slate-950 text-base font-medium leading-normal"
                                 >
-                                    {{ cartProduct.quantity }}
+                                    {{ 
+                                        cartProduct.quantity
+                                            ? cartProduct.quantity
+                                            : product.min_order_quantity ? product.min_order_quantity : 1
+                                             }}
                                 </div>
 
                                 <button

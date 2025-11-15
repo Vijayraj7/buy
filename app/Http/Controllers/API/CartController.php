@@ -43,7 +43,11 @@ class CartController extends Controller
             return $this->json('Product not available now.', [], 422);
         }
 
-        $quantity = $request->quantity ?? $product->min_order_quantity ?? 1;
+        if (isset($product->min_order_quantity)) {
+            $quantity = $product->min_order_quantity ?? 1;
+        } else {
+            $quantity = $request->quantity ?? $product->min_order_quantity ?? 1;
+        }
         // return $this->json('Sorry! pro ' . $quantity, [], 422);
 
         $customer = auth()->user()->customer;

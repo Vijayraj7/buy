@@ -88,6 +88,7 @@ class CartRepository extends Repository
 
                 $productArray[] = (object) [
                     'id' => $product->id,
+                    'min_order_quantity' => $product->min_order_quantity,
                     'quantity' => (int) $cart->quantity,
                     'name' => $product->name,
                     'thumbnail' => $product->thumbnail,
@@ -142,7 +143,7 @@ class CartRepository extends Repository
 
         if ($cart) {
             $cart->update([
-                'quantity' => $isBuyNow ? 1 : $cart->quantity + 1,
+                'quantity' => $isBuyNow ? $product->min_order_quantity ?? 1 : $cart->quantity + 1,
                 'unit' => $request->unit ?? $product->unit,
             ]);
 

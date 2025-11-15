@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:public/build/assets/ArrowRightIcon-DUOyHijz.js
-import{c as e,o as a,a as r}from"./app-CXRX8rNw.js";function c(l,o){return a(),e("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"currentColor","aria-hidden":"true","data-slot":"icon"},[r("path",{"fill-rule":"evenodd",d:"M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z","clip-rule":"evenodd"})])}export{c as r};
-========
-import{c as e,o as a,a as r}from"./app-CDE8A8YH.js";function c(l,o){return a(),e("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"currentColor","aria-hidden":"true","data-slot":"icon"},[r("path",{"fill-rule":"evenodd",d:"M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z","clip-rule":"evenodd"})])}export{c as r};
->>>>>>>> 1838bc650c0fcfad7bd93c300fa36789fd6d3bd8:public/build/assets/ArrowRightIcon-DC-w4z1W.js

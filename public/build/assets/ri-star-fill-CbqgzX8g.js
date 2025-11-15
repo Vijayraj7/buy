@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:public/build/assets/ri-star-fill-D24wWR5e.js
-import{_ as e,c as o,o as s,a as t}from"./app-CXRX8rNw.js";const n={},c={class:"remixicon ri-star-fill",viewBox:"0 0 24 24",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg"};function l(a,r){return s(),o("svg",c,[...r[0]||(r[0]=[t("path",{d:"M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"},null,-1)])])}const L=e(n,[["render",l]]);export{L as R};
-========
-import{_ as e,c as o,o as s,a as t}from"./app-CDE8A8YH.js";const n={},c={class:"remixicon ri-star-fill",viewBox:"0 0 24 24",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg"};function l(a,r){return s(),o("svg",c,[...r[0]||(r[0]=[t("path",{d:"M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"},null,-1)])])}const L=e(n,[["render",l]]);export{L as R};
->>>>>>>> 1838bc650c0fcfad7bd93c300fa36789fd6d3bd8:public/build/assets/ri-star-fill-CbqgzX8g.js

@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:public/build/assets/ri-arrow-right-line-COQgK6MK.js
-import{_ as e,c as o,o as t,a as s}from"./app-CXRX8rNw.js";const n={},c={class:"remixicon ri-arrow-right-line",viewBox:"0 0 24 24",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg"};function i(a,r){return t(),o("svg",c,[...r[0]||(r[0]=[s("path",{d:"M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"},null,-1)])])}const _=e(n,[["render",i]]);export{_ as R};
-========
-import{_ as e,c as o,o as t,a as s}from"./app-CDE8A8YH.js";const n={},c={class:"remixicon ri-arrow-right-line",viewBox:"0 0 24 24",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg"};function i(a,r){return t(),o("svg",c,[...r[0]||(r[0]=[s("path",{d:"M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"},null,-1)])])}const _=e(n,[["render",i]]);export{_ as R};
->>>>>>>> 1838bc650c0fcfad7bd93c300fa36789fd6d3bd8:public/build/assets/ri-arrow-right-line-_mUu5OFp.js

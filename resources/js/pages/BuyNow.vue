@@ -25,12 +25,12 @@
                 <div class="py-4 border-b tran" :class="showProductItems ? 'border-primary' : 'border-slate-200'">
                     <!-- checkout -->
                     <div class="flex gap-2 justify-between items-center">
-                        <div class="text-slate-950 text-lg sm:text-3xl font-medium leading-10">{{ $t('Checkout') }}
+                        <div class="text-slate-950 text-lg sm:text-3xl font-medium leading-11">{{ $t('Checkout') }}
                         </div>
                         <div class="flex items-center gap-2 cursor-pointer"
                             @click="showProductItems = !showProductItems">
                             <div class="text-primary-600 text-lg font-medium leading-normal tracking-tight">
-                                ({{ basketStore.buyNowProduct ? 1 : 0 }} {{ $t('items') }})
+                                ({{ basketStore.buyNowProduct ? 1 : 0 }} - {{ $t('items') }})
                             </div>
                             <ChevronDownIcon class="w-5 h-5 text-primary-600 transition duration-300"
                                 :class="showProductItems ? 'rotate-180' : ''" />

@@ -101,13 +101,21 @@ class OrderController extends Controller
             return $this->json('Sorry shop cart is empty', [], 422);
         }
 
+
+        foreach ($carts as $cart) {
+            $product = $cart->product;
+            if ($product->min_order_quantity > $cart->quantity) {
+                return $this->json('Minimum order quantity is ' . $product->min_order_quantity, [], 422);
+            }
+        }
+
         $toUpper = strtoupper($request->payment_method);
         $paymentMethods = PaymentMethod::cases();
 
         $paymentMethod = $paymentMethods[array_search($toUpper, array_column(PaymentMethod::cases(), 'name'))];
 
         // Store the order
-         [$payment, $order] = OrderRepository::storeByRequestFromCart($request, $paymentMethod, $carts);
+        [$payment, $order] = OrderRepository::storeByRequestFromCart($request, $paymentMethod, $carts);
 
         $paymentUrl = null;
         if ($paymentMethod->name != 'CASH') {
@@ -116,7 +124,7 @@ class OrderController extends Controller
 
         // Send WhatsApp template message
 
-        $template =[
+        $template = [
             '1' => $order->order_code,
             '2' => $order->customer->user->name ?? 'Guest',
             '3' => $order->address->address_line ?? 'address not found',

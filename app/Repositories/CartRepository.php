@@ -154,7 +154,7 @@ class CartRepository extends Repository
             'shop_id' => $product->shop->id,
             'is_buy_now' => $isBuyNow,
             'customer_id' => $customer->id,
-            'quantity' => $product->min_order_quantity,
+            'quantity' => $product->min_order_quantity ?? 1,
             'unit' => $unit,
         ]);
     }

@@ -43,7 +43,7 @@ class CartController extends Controller
             return $this->json('Product not available now.', [], 422);
         }
 
-        $quantity = $request->quantity ?? $product->min_order_quantity;
+        $quantity = $request->quantity ?? $product->min_order_quantity ?? 1;
         // return $this->json('Sorry! pro ' . $quantity, [], 422);
 
         $customer = auth()->user()->customer;
@@ -99,8 +99,10 @@ class CartController extends Controller
         }
 
         $quantity = $cart->quantity;
-        if ($quantity < $product->min_order_quantity) {
-            $quantity = $product->min_order_quantity;
+        if (isset($product->min_order_quantity)) {
+            if ($quantity < $product->min_order_quantity) {
+                $quantity = $product->min_order_quantity;
+            }
         }
 
         $flashSale = $product->flashSales?->first();
@@ -160,13 +162,20 @@ class CartController extends Controller
         $message = 'product removed from cart';
 
         if ($cart->quantity > 1) {
-            if ($cart->quantity > $product->min_order_quantity) {
+            if (isset($product->min_order_quantity)) {
+                if ($cart->quantity > $product->min_order_quantity) {
+                    $cart->update([
+                        'quantity' => $cart->quantity - 1,
+                    ]);
+                    $message = 'product quantity decreased';
+                } else {
+                    $cart->delete();
+                }
+            } else {
                 $cart->update([
                     'quantity' => $cart->quantity - 1,
                 ]);
                 $message = 'product quantity decreased';
-            } else {
-                $cart->delete();
             }
         } else {
             $cart->delete();

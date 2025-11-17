@@ -11,6 +11,11 @@
 # /.phpunit.cache
 # /.vscode
 # /.zed
+
+# Vite build output (always ignore)
+public/build/
+public/hot
+
 # /auth.json
 # /node_modules
 # /public/build

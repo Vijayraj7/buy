@@ -41,7 +41,7 @@
               </div>
               <!-- quantity and price -->
               <div class="text-slate-800 text-base font-normal leading-normal">
-                1 X {{ master.showCurrency((product?.discount_price > 0) ? product?.discount_price : product?.price) }}
+                {{ product?.min_order_quantity ?? 1 }} X {{ master.showCurrency((product?.discount_price > 0) ? product?.discount_price : product?.price) }}
               </div>
             </div>
           </div>

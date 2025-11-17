@@ -461,7 +461,7 @@
                                     {{
                                         cartProduct.quantity
                                             ? cartProduct.quantity
-                                            : 1
+                                            : product.min_order_quantity ? product.min_order_quantity : 1
                                     }}
                                 </div>
 
@@ -1210,12 +1210,16 @@ const buyNow = () => {
         {
             product_id: formData.value.product_id,
             is_buy_now: true,
-            quantity: 1,
-            unit: null,
+            quantity: product.min_order_quantity
+                ? product.min_order_quantity
+                : 1,
         },
         product.value
     );
 
+            quantity: product.min_order_quantity
+                ? product.min_order_quantity
+                : 1,
     basketStore.buyNowShopId = product.value?.shop.id;
     router.push({ name: "buynow" });
 };

@@ -82,12 +82,13 @@ class CartRepository extends Repository
                     $discountPercentage = ($mainPrice - $discountPrice) / $mainPrice * 100;
                 }
 
-                $mainCurrencyPrice= $mainPrice * request()->currencyData['rate'];
-                $discountCurrencyPrice= $discountPrice * request()->currencyData['rate'];
-                $discountPercentageCurrency= $discountPercentage * request()->currencyData['rate'];
+                $mainCurrencyPrice = $mainPrice * request()->currencyData['rate'];
+                $discountCurrencyPrice = $discountPrice * request()->currencyData['rate'];
+                $discountPercentageCurrency = $discountPercentage * request()->currencyData['rate'];
 
                 $productArray[] = (object) [
                     'id' => $product->id,
+                    'min_order_quantity' => $product->min_order_quantity,
                     'quantity' => (int) $cart->quantity,
                     'name' => $product->name,
                     'thumbnail' => $product->thumbnail,
@@ -142,7 +143,7 @@ class CartRepository extends Repository
 
         if ($cart) {
             $cart->update([
-                'quantity' => $isBuyNow ? 1 : $cart->quantity + 1,
+                'quantity' => $isBuyNow ? $product->min_order_quantity ?? 1 : $cart->quantity + 1,
                 'unit' => $request->unit ?? $product->unit,
             ]);
 
@@ -154,7 +155,7 @@ class CartRepository extends Repository
             'shop_id' => $product->shop->id,
             'is_buy_now' => $isBuyNow,
             'customer_id' => $customer->id,
-            'quantity' => $request->quantity ?? 1,
+            'quantity' => $product->min_order_quantity ?? 1,
             'unit' => $unit,
         ]);
     }
@@ -280,11 +281,11 @@ class CartRepository extends Repository
 
         $payableAmount += $totalOrderTaxAmount;
 
-        $totalCurrencyAmount=$totalAmount * $request->currencyData['rate'];
-        $totalCurrencyDeliveryCharge=$deliveryCharge * $request->currencyData['rate'];
-        $totalCurrencyCouponDiscount=$couponDiscount * $request->currencyData['rate'];
-        $totalCurrencyOrderTaxAmount=$totalOrderTaxAmount * $request->currencyData['rate'];
-        $totalCurrencyPayableAmount=$payableAmount * $request->currencyData['rate'];
+        $totalCurrencyAmount = $totalAmount * $request->currencyData['rate'];
+        $totalCurrencyDeliveryCharge = $deliveryCharge * $request->currencyData['rate'];
+        $totalCurrencyCouponDiscount = $couponDiscount * $request->currencyData['rate'];
+        $totalCurrencyOrderTaxAmount = $totalOrderTaxAmount * $request->currencyData['rate'];
+        $totalCurrencyPayableAmount = $payableAmount * $request->currencyData['rate'];
 
         return [
             'total_amount' => (float) round($totalCurrencyAmount, 2),

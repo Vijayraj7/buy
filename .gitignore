@@ -8,6 +8,7 @@
 # /.fleet
 # /.idea
 # /.nova
+
 # Vite build output (always ignore)
 public/build/
 public/hot
